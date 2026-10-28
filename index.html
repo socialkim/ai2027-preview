@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AI 2027 프리뷰 · 맡겨 본 만큼 보이는 2027년 · 김덕진</title>
+<meta name="description" content="『AI 2027 트렌드&활용백과』 저자 김덕진 소장의 2026.10.28 교보문고 강연 자료 121장을 웹북으로 넘겨 보세요. 2027년 AI 트렌드 10과 활용편 미리보기.">
+<meta name="author" content="김덕진 · IT커뮤니케이션연구소(ITCL)">
+<!-- 검색 노출을 원하면 아래 한 줄을 지우세요 -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:type" content="website">
+<meta property="og:title" content="AI 2027 프리뷰 · 맡겨 본 만큼 보이는 2027년">
+<meta property="og:description" content="김덕진 소장의 교보문고 강연 자료 121장 · 2027년 AI 트렌드 10 · 『AI 2027 트렌드&활용백과』 11월 2일 출간">
+<!-- 저장소 이름이 다르면 아래 두 주소의 ai2027-preview 부분을 바꾸세요(카톡 미리보기용 절대 주소) -->
+<meta property="og:url" content="https://socialkim.github.io/ai2027-preview/">
+<meta property="og:image" content="https://socialkim.github.io/ai2027-preview/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root{
+  --red:#FF5A4F; --red-d:#E8463B; --red-50:#FFF1EF; --ink:#181818; --body:#2A2A2A; --mute:#6E6E6E;
+  --line:#E7E7E7; --pale:#F5F5F4; --bg:#FFFFFF; --dark:#141414;
+  --r:14px; --max:1180px;
+  --shadow:0 1px 2px rgba(0,0,0,.04),0 8px 24px rgba(0,0,0,.06);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--body);font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;word-break:keep-all}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;height:auto;display:block}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+button{font:inherit;cursor:pointer}
+
+/* header */
+.top{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.92);backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:16px;height:60px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;color:var(--ink);letter-spacing:-.01em;white-space:nowrap}
+.brand b{background:var(--red);color:#fff;border-radius:8px;padding:3px 8px;font-size:13px;letter-spacing:.02em}
+.nav{margin-left:auto;display:flex;gap:4px;align-items:center}
+.nav a{padding:8px 12px;border-radius:999px;font-size:15px;font-weight:600;color:var(--body)}
+.nav a:hover{background:var(--pale)}
+.nav a.buy{background:var(--ink);color:#fff}
+.nav a.buy:hover{background:#000}
+@media (max-width:760px){.nav a:not(.buy){display:none}.brand span{display:none}}
+
+/* hero */
+.hero{padding:56px 0 40px;background:linear-gradient(180deg,#fff 0%,#fff 60%,var(--pale) 100%)}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+.eyebrow{display:inline-flex;gap:8px;align-items:center;background:var(--red-50);color:var(--red-d);font-weight:700;font-size:14px;border-radius:999px;padding:6px 12px}
+.eyebrow i{width:6px;height:6px;border-radius:50%;background:var(--red);display:inline-block}
+h1{font-size:clamp(36px,6vw,64px);line-height:1.12;letter-spacing:-.035em;color:var(--ink);margin:18px 0 14px;font-weight:800}
+h1 em{font-style:normal;color:var(--red)}
+.lead{font-size:clamp(16px,2vw,19px);color:var(--mute);margin:0 0 26px;max-width:36em}
+.ctas{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:12px;padding:14px 20px;font-weight:700;font-size:16px;border:1px solid transparent;transition:transform .12s ease,background .15s}
+.btn:active{transform:translateY(1px)}
+.btn.primary{background:var(--red);color:#fff}
+.btn.primary:hover{background:var(--red-d)}
+.btn.ghost{background:#fff;border-color:var(--line);color:var(--ink)}
+.btn.ghost:hover{border-color:#cfcfcf}
+.btn.dark{background:var(--ink);color:#fff}
+.stats{display:flex;gap:26px;margin-top:30px;flex-wrap:wrap}
+.stats div{min-width:84px}
+.stats b{display:block;font-size:28px;color:var(--ink);letter-spacing:-.02em;line-height:1.1}
+.stats span{font-size:13px;color:var(--mute)}
+.cover{position:relative;justify-self:center;width:min(360px,80vw)}
+.cover img{mix-blend-mode:multiply}
+.cover .tag{position:absolute;right:-14px;bottom:28px;background:var(--ink);color:#fff;border-radius:999px;padding:14px 16px;font-weight:800;text-align:center;line-height:1.2;font-size:14px;box-shadow:var(--shadow)}
+.cover .tag small{display:block;font-weight:600;color:#ffb3ad;font-size:11px}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr}.cover{order:-1;width:min(260px,64vw)}}
+
+/* sections */
+section{padding:72px 0}
+.sec-h{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:26px;flex-wrap:wrap}
+.kicker{color:var(--red);font-weight:800;font-size:14px;letter-spacing:.08em}
+h2{font-size:clamp(26px,3.6vw,38px);letter-spacing:-.03em;color:var(--ink);margin:6px 0 0;line-height:1.2}
+.sub{color:var(--mute);margin:8px 0 0}
+.alt{background:var(--pale)}
+
+/* entry cards */
+.entries{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:-6px}
+.entry{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:22px;display:flex;flex-direction:column;gap:6px;box-shadow:var(--shadow);transition:transform .15s}
+.entry:hover{transform:translateY(-2px)}
+.entry .n{font-weight:800;color:var(--red);font-size:14px}
+.entry b{font-size:20px;color:var(--ink)}
+.entry span{color:var(--mute);font-size:15px}
+@media (max-width:760px){.entries{grid-template-columns:1fr}}
+
+/* trends */
+.trends{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.trend{display:grid;grid-template-columns:150px 1fr;gap:16px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:12px;transition:border-color .15s,transform .15s}
+.trend:hover{border-color:var(--red);transform:translateY(-1px)}
+.trend img{border-radius:8px;aspect-ratio:16/9;object-fit:cover;background:var(--pale)}
+.trend .no{font-weight:800;color:var(--red);font-size:13px;letter-spacing:.06em}
+.trend b{display:block;font-size:19px;color:var(--ink);letter-spacing:-.02em;margin:2px 0 3px}
+.trend p{margin:0;color:var(--mute);font-size:15px;line-height:1.45}
+@media (max-width:860px){.trends{grid-template-columns:1fr}.trend{grid-template-columns:120px 1fr}}
+
+/* preview */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.shot{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);background:#fff;box-shadow:var(--shadow)}
+.shot figcaption{padding:12px 16px;font-size:15px;color:var(--mute)}
+.shot figcaption b{color:var(--ink)}
+@media (max-width:760px){.split{grid-template-columns:1fr}}
+
+/* book buy */
+.buy-box{display:grid;grid-template-columns:260px 1fr;gap:40px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:22px;padding:36px;box-shadow:var(--shadow)}
+.buy-box img{mix-blend-mode:multiply}
+.badges{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 20px}
+.badge{background:var(--pale);border-radius:999px;padding:6px 12px;font-size:14px;font-weight:600;color:var(--body)}
+.badge.r{background:var(--red-50);color:var(--red-d)}
+.stores{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.store{display:flex;flex-direction:column;align-items:flex-start;gap:2px;border:1.5px solid var(--ink);border-radius:14px;padding:14px 16px;font-weight:800;color:var(--ink);font-size:18px;transition:background .15s,color .15s}
+.store small{font-weight:600;font-size:13px;color:var(--mute)}
+.store:hover{background:var(--ink);color:#fff}
+.store:hover small{color:#cfcfcf}
+.store.main{background:var(--red);border-color:var(--red);color:#fff}
+.store.main small{color:#ffe2df}
+.store.main:hover{background:var(--red-d)}
+@media (max-width:860px){.buy-box{grid-template-columns:1fr;padding:24px}.buy-box img{width:200px;margin:0 auto}.stores{grid-template-columns:1fr}}
+
+/* author */
+.books{border-radius:var(--r);background:#fff;border:1px solid var(--line);padding:18px;overflow:hidden}
+.author{display:grid;grid-template-columns:1fr 1.3fr;gap:28px;align-items:start;margin-top:22px}
+.author ul{margin:10px 0 0;padding-left:18px;color:var(--body)}
+.author li{margin:3px 0}
+.booklist{display:flex;flex-direction:column;gap:8px}.brow{display:flex;flex-wrap:wrap;gap:8px}
+.brow a{border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 12px;font-size:14px;font-weight:600}
+.brow a:hover{border-color:var(--ink)}
+@media (max-width:860px){.author{grid-template-columns:1fr}}
+
+/* channels */
+.chans{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:14px}
+.chan{border-radius:18px;padding:26px;display:flex;flex-direction:column;gap:8px;min-height:220px}
+.chan h3{margin:0;font-size:22px;letter-spacing:-.02em}
+.chan p{margin:0;font-size:15px;opacity:.85}
+.chan .btn{margin-top:auto;align-self:flex-start}
+.chan.yt{background:var(--dark);color:#fff}
+.chan.yt img{border-radius:10px;margin-bottom:6px}
+.chan.kt{background:#FEE500;color:#191919}
+.chan.lec{background:var(--red-50);color:var(--ink)}
+@media (max-width:960px){.chans{grid-template-columns:1fr}}
+
+/* download */
+.dl{display:flex;gap:18px;align-items:center;justify-content:space-between;flex-wrap:wrap;border:1px dashed #cfcfcf;border-radius:var(--r);padding:20px 22px;background:#fff}
+.dl p{margin:0;color:var(--mute);font-size:14px}
+.dl b{color:var(--ink);font-size:17px}
+
+footer{border-top:1px solid var(--line);padding:34px 0 60px;color:var(--mute);font-size:14px}
+footer .row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer b{color:var(--ink)}
+footer nav a{margin-right:14px}
+
+/* reader */
+#reader{position:fixed;inset:0;z-index:50;background:#0f0f10;color:#eee;display:none;flex-direction:column}
+#reader.on{display:flex}
+.rbar{display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid #222;flex-wrap:wrap}
+.rbar .t{font-weight:700;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:40vw}
+.rbar .sp{flex:1}
+.rbtn{white-space:nowrap;background:#1d1d20;border:1px solid #2c2c30;color:#eee;border-radius:10px;padding:8px 12px;font-size:14px;font-weight:600}
+.rbtn:hover{background:#26262a}
+.rbtn.red{background:var(--red);border-color:var(--red);color:#fff}
+select.rbtn{appearance:none;padding-right:28px;background-image:linear-gradient(45deg,transparent 50%,#aaa 50%),linear-gradient(135deg,#aaa 50%,transparent 50%);background-position:calc(100% - 15px) 52%,calc(100% - 10px) 52%;background-size:5px 5px;background-repeat:no-repeat;max-width:46vw}
+.stage{flex:1;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:14px;touch-action:pan-y}
+.stage img{max-width:100%;max-height:100%;border-radius:6px;box-shadow:0 20px 50px rgba(0,0,0,.5);user-select:none;-webkit-user-drag:none;background:#fff;transition:opacity .18s ease}
+.stage img.fade{opacity:.15}
+.hot{position:absolute;z-index:1;pointer-events:none}.hot a{position:absolute;pointer-events:auto;border-radius:6px;outline:2px solid transparent;transition:outline-color .15s,background .15s}.hot a:hover{outline-color:rgba(255,90,79,.9);background:rgba(255,90,79,.08)}
+.nav-hit{z-index:2;position:absolute;top:0;bottom:0;width:18%;display:flex;align-items:center;border:0;background:transparent;color:#fff;font-size:34px;opacity:.0;transition:opacity .2s}
+.nav-hit:hover{opacity:.7}
+.nav-hit.l{left:0;justify-content:flex-start;padding-left:14px}
+.nav-hit.r{right:0;justify-content:flex-end;padding-right:14px}
+.rfoot{display:flex;align-items:center;gap:12px;padding:10px 14px 14px;border-top:1px solid #222}
+.rfoot input[type=range]{flex:1;accent-color:var(--red)}
+.count{font-variant-numeric:tabular-nums;font-weight:700;min-width:76px;text-align:center}
+.strip{display:none;gap:8px;overflow-x:auto;padding:10px 14px;border-top:1px solid #222;scrollbar-width:thin}
+.strip.on{display:flex}
+.strip button{flex:0 0 auto;width:150px;border:2px solid transparent;border-radius:8px;padding:0;background:#222;position:relative}
+.strip button.cur{border-color:var(--red)}
+.strip button img{border-radius:6px;aspect-ratio:16/9;width:100%;height:auto;object-fit:cover}
+.strip button span{position:absolute;left:4px;top:4px;background:rgba(0,0,0,.7);color:#fff;font-size:11px;border-radius:4px;padding:0 4px}
+.endcard{margin:0 auto 10px;width:min(620px,92%);background:#fff;color:var(--ink);border-radius:16px;padding:16px 18px;display:none;gap:12px;align-items:center;box-shadow:0 10px 40px rgba(0,0,0,.4)}
+.endcard.on{display:flex}
+.endcard p{margin:0;font-size:15px;flex:1}
+@media (max-width:640px){.rbar .t,#rFull{display:none}.rbar{gap:6px;padding:8px 10px;flex-wrap:nowrap}select.rbtn{max-width:40vw;min-width:0;flex:1 1 auto}.rbar .sp{display:none}.rbtn{padding:7px 9px;font-size:13px}.nav-hit{display:none}.strip button{width:110px}.rhint{display:block!important}}
+.rhint{display:none;text-align:center;color:#888;font-size:12px;padding:0 0 6px}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#/"><b>AI 2027</b><span>강연 웹북 · 김덕진</span></a>
+    <nav class="nav">
+      <a href="#/read/1">자료 보기</a>
+      <a href="#trends">트렌드 10</a>
+      <a href="#newsduk">뉴스덕</a>
+      <a href="#contact">강연 문의</a>
+      <a class="buy" href="#buy">책 예약</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" style="padding-top:56px">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow"><i></i>2026.10.28 교보문고 강연 · 2027 트렌드 프리뷰</span>
+      <h1>맡겨 본 만큼<br><em>보이는 2027년</em></h1>
+      <p class="lead">『AI 2027 트렌드&amp;활용백과』 저자 김덕진 소장의 강연 자료 121장을 책장 넘기듯 볼 수 있게 정리했습니다. 2027년 AI 트렌드 10부터 활용편 미리보기까지 담았습니다.</p>
+      <div class="ctas">
+        <a class="btn primary" href="#/read/1">강연 자료 펼쳐 보기 →</a>
+        <a class="btn ghost" href="#buy">책 예약하기</a>
+      </div>
+      <div class="stats">
+        <div><b>10</b><span>2027 AI 트렌드</span></div>
+        <div><b>121장</b><span>강연 자료</span></div>
+        <div><b>약 320쪽</b><span>따라 하는 활용편</span></div>
+        <div><b>11.2</b><span>출간 · 예약 판매 중</span></div>
+      </div>
+    </div>
+    <a class="cover" href="#buy" aria-label="책 예약으로 이동">
+      <img src="assets/cover.webp" alt="AI 2027 트렌드&활용백과 표지" width="856" height="1200">
+    </a>
+  </div>
+</section>
+
+<section style="padding:28px 0 64px">
+  <div class="wrap">
+    <div class="entries">
+      <a class="entry" href="#/read/1"><span class="n">01</span><b>강연 자료 보기</b><span>121장을 넘겨 보거나 목차로 바로 이동합니다.</span></a>
+      <a class="entry" href="#trends"><span class="n">02</span><b>트렌드 10 한눈에</b><span>각 트렌드의 한 줄 요약에서 해당 장으로 들어갑니다.</span></a>
+      <a class="entry" href="#buy"><span class="n">03</span><b>책으로 더 깊이</b><span>강연에서 다 못 한 이야기와 따라 하는 실습은 책에 있습니다.</span></a>
+    </div>
+  </div>
+</section>
+
+<section id="trends" class="alt">
+  <div class="wrap">
+    <div class="sec-h">
+      <div><div class="kicker">TREND 10</div><h2>2027년, 이 열 가지가 움직입니다</h2>
+      <p class="sub">개인은 폭발했고, 조직은 막혔고, 규제가 도착했다 — 카드를 누르면 해당 장부터 열립니다.</p></div>
+      <a class="btn ghost" href="#/read/11">트렌드 10 요약표 보기</a>
+    </div>
+    <div class="trends" id="trendList"></div>
+  </div>
+</section>
+
+<section id="preview">
+  <div class="wrap">
+    <div class="sec-h">
+      <div><div class="kicker">BOOK PREVIEW</div><h2>오늘 들으신 트렌드 10은 책의 1장입니다</h2>
+      <p class="sub">책의 절반이 넘는 약 320쪽은 프롬프트부터 도구별 실습까지, 직접 맡겨 보는 활용편입니다.</p></div>
+      <a class="btn ghost" href="#/read/117">활용편 미리보기 열기</a>
+    </div>
+    <div class="split">
+      <figure class="shot" style="margin:0"><a href="#/read/118"><img src="pages/118.webp" alt="활용편 구조: 지시서 한 장 위에 AI 팀을 꾸립니다" loading="lazy" width="1600" height="900"></a>
+        <figcaption><b>지시서 한 장 위에, AI 팀을 꾸립니다</b> · 2장 프롬프트 위에 3~7장 도구 다섯 갈래</figcaption></figure>
+      <figure class="shot" style="margin:0"><a href="#/read/119"><img src="pages/119.webp" alt="따라 하면 남는 결과물 8가지" loading="lazy" width="1600" height="900"></a>
+        <figcaption><b>따라 하면, 이런 결과물이 남습니다</b> · 장과 쪽을 함께 적은 실습 8가지</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="buy" class="alt">
+  <div class="wrap">
+    <div class="buy-box">
+      <img src="assets/cover.webp" alt="AI 2027 트렌드&활용백과" width="856" height="1200" loading="lazy">
+      <div>
+        <div class="kicker">NEW BOOK · 11월 2일 출간</div>
+        <h2>『AI 2027 트렌드&amp;활용백과』</h2>
+        <p class="sub">2027년, AGI 시대를 미리 준비하는 최고급 코스. AI 트렌드부터 당장 써먹는 AI 도구 활용법까지 한 권에 담았습니다.</p>
+        <div class="badges"><span class="badge r">이세돌 9단 추천</span><span class="badge">김덕진 지음 · 스마트북스</span><span class="badge">시리즈 4번째 책</span></div>
+        <div class="stores">
+          <a class="store main" href="https://product.kyobobook.co.kr/detail/S000221773230" target="_blank" rel="noopener">교보문고<small>예약 구매 →</small></a>
+          <a class="store" href="https://www.yes24.com/product/goods/199437828" target="_blank" rel="noopener">예스24<small>예약 구매 →</small></a>
+          <a class="store" href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=405346033" target="_blank" rel="noopener">알라딘<small>예약 구매 →</small></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="author">
+  <div class="wrap">
+    <div class="sec-h"><div><div class="kicker">AUTHOR</div><h2>AI 내비게이터 김덕진</h2>
+      <p class="sub">기술과 사람 사이를 잇는 번역가. 1년 동안 473번, AI 이야기를 들고 사람들을 만났습니다.</p></div></div>
+    <div class="books"><img src="assets/books.webp" alt="김덕진 소장의 저서들" loading="lazy" width="1540" height="384"></div>
+    <div class="author">
+      <ul>
+        <li>IT커뮤니케이션연구소(ITCL) 소장</li>
+        <li>세종사이버대학교 컴퓨터·AI공학과 교수 · AI교육센터 센터장</li>
+        <li>서울시립대 경영대학 겸임교수</li>
+        <li>행정안전부 인공지능정부 기술자문단</li>
+        <li>MBC 라디오 「손에 잡히는 경제」, KBS 라디오 「세상의 모든 정보」 고정 출연</li>
+      </ul>
+      <div>
+        <p class="sub" style="margin:0 0 10px">함께 보면 좋은 책 — 제목을 누르면 교보문고 책 페이지로 이동합니다.</p>
+        <div class="booklist" id="bookList"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="newsduk" class="alt">
+  <div class="wrap">
+    <div class="sec-h"><div><div class="kicker">KEEP IN TOUCH</div><h2>강연 다음에도, 매주 AI 소식을</h2></div></div>
+    <div class="chans" id="contact">
+      <div class="chan yt">
+        <a href="https://www.youtube.com/@newsduk" target="_blank" rel="noopener"><img src="pages/007.webp" alt="김덕진의 뉴스덕 유튜브" loading="lazy" width="1600" height="900"></a>
+        <h3>김덕진의 뉴스덕</h3>
+        <p>한 주의 AI 뉴스를 김덕진 소장이 직접 풀어 드립니다.</p>
+        <a class="btn primary" href="https://www.youtube.com/@newsduk" target="_blank" rel="noopener">유튜브 구독하기</a>
+      </div>
+      <div class="chan kt">
+        <h3>김덕진의 AI 큐레이션</h3>
+        <p>오픈카톡방에서 강연 자료와 AI 소식을 가장 먼저 나눕니다.</p>
+        <a class="btn dark" href="https://open.kakao.com/o/gQiVg8Bh" target="_blank" rel="noopener">오픈카톡방 들어가기</a>
+      </div>
+      <div class="chan lec">
+        <h3>강연·교육 문의</h3>
+        <p>기업·공공·대학 강연, 임직원 AI 교육, 자문을 진행합니다.</p>
+        <p style="margin-top:6px"><b>info@itcl.kr</b><br>02-6953-3379 (IT커뮤니케이션연구소)</p>
+        <a class="btn ghost" href="https://buly.kr/FLbHLeq" target="_blank" rel="noopener">강연 요청하기</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding:48px 0">
+  <div class="wrap">
+    <div class="dl">
+      <div><b>강연 자료 PDF 받기 (121장)</b>
+        <p>강연 참가자·오픈카톡방 멤버를 위한 개인 학습용입니다. 링크 공유는 환영하지만, 파일 재배포와 상업적 이용은 삼가 주세요.</p></div>
+      <a class="btn dark" href="download/AI2027_kyobo_talk_2026-10-28.pdf" download>PDF 내려받기</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap row">
+    <div><b>맡겨 본 만큼 보이는 2027년 — AI 2027 강연 웹북</b><br>
+      2026.10.28 교보문고 · 『AI 2027 트렌드&amp;활용백과』 강연 자료<br>
+      © 2026 김덕진 · IT커뮤니케이션연구소(ITCL). 링크 공유는 환영합니다. 글·이미지의 무단 복제·재배포·상업적 이용은 금지합니다.</div>
+    <nav><a href="#/">홈</a><a href="#/read/1">자료</a><a href="#buy">책 예약</a><a href="#newsduk">뉴스덕</a></nav>
+  </div>
+</footer>
+
+<!-- reader -->
+<div id="reader" role="dialog" aria-modal="true" aria-label="강연 자료 보기">
+  <div class="rbar">
+    <button class="rbtn" id="rClose" aria-label="닫기">✕ 닫기</button>
+    <span class="t" id="rTitle">강연 자료</span>
+    <select class="rbtn" id="rToc" aria-label="목차"></select>
+    <span class="sp"></span>
+    <button class="rbtn" id="rGrid">모아 보기</button>
+    <button class="rbtn" id="rFull">전체 화면</button>
+    <a class="rbtn red" href="https://product.kyobobook.co.kr/detail/S000221773230" target="_blank" rel="noopener">책 예약</a>
+  </div>
+  <div class="stage" id="stage">
+    <img id="rImg" alt="" draggable="false">
+    <div class="hot" id="rHot"></div>
+    <button class="nav-hit l" id="rPrev" aria-label="이전 장">‹</button>
+    <button class="nav-hit r" id="rNext" aria-label="다음 장">›</button>
+  </div>
+  <div class="rhint">휴대폰을 가로로 돌리면 더 크게 보입니다 · 좌우로 밀어 넘기기</div>
+  <div class="endcard" id="endcard">
+    <p><b>마지막 장입니다.</b> 강연에서 다 못 한 이야기는 책에 있습니다.</p>
+    <a class="btn primary" href="#buy" id="endBuy">책 예약하기</a>
+  </div>
+  <div class="strip" id="strip"></div>
+  <div class="rfoot">
+    <button class="rbtn" id="rPrev2" aria-label="이전 장">‹ 이전</button>
+    <input type="range" id="rRange" min="1" max="121" value="1" aria-label="장 이동">
+    <span class="count" id="rCount">1 / 121</span>
+    <button class="rbtn" id="rNext2" aria-label="다음 장">다음 ›</button>
+  </div>
+</div>
+
+<script>
+(function(){
+  var TOTAL = 121;
+  var TOC = [
+    [1,"표지 · 저자 소개"],[4,"1년 결산 · 473번의 강연"],[8,"오프닝 · 같은 시점, 다른 AI"],
+    [11,"프롤로그 · 트렌드 10 한눈에"],[13,"2027년의 AI 달력"],
+    [16,"트렌드 1 · AI 위임의 시대"],[34,"트렌드 2 · AI 머니 게임"],[46,"트렌드 3 · 두 개의 AI 세계"],
+    [56,"트렌드 4 · 간택의 경제"],[68,"트렌드 5 · 피지컬 AI"],[73,"트렌드 6 · AI 과학자"],
+    [81,"트렌드 7 · 탤런트 워"],[94,"트렌드 8 · 조직이 병목이다"],[103,"트렌드 9 · 기억과 감정의 락인"],
+    [110,"트렌드 10 · 국가 대항전"],[116,"에필로그 · 변화의 근육"],[117,"책 미리보기 · 활용편"],[120,"책 소개 · 감사합니다"]
+  ];
+  var TRENDS = [
+    [16,"01","AI 위임의 시대","내가 컴퓨터를 꺼 둬도 일하는 AI는 왔다"],
+    [34,"02","AI 머니 게임","700조 원을 걸고, 브레이크를 밟는 회사들"],
+    [46,"03","두 개의 AI 세계","묶어서 파는 미국, 공짜로 뿌리는 중국"],
+    [56,"04","간택의 경제","AI에게 선택받지 못하면 팔리지 않는다"],
+    [68,"05","피지컬 AI","6천만 원짜리 '8시간 로봇'이 공장 문을 두드린다"],
+    [73,"06","AI 과학자","밤새 실험을 돌리는 AI, 아침에 판단하는 사람"],
+    [81,"07","탤런트 워","천재 한 명의 몸값과 신입의 빈자리"],
+    [94,"08","조직이 병목이다","사장님은 20분 만에 앱을 갖고, 대기업은 규정을 쓴다"],
+    [103,"09","기억과 감정의 락인","나를 기억하는 AI를 떠날 수 있을까"],
+    [110,"10","국가 대항전에서 대한민국은","만드는 주권에서 끊기지 않는 주권으로"]
+  ];
+  var BOOKS = [
+    [["AI 2027 트렌드&활용백과","https://product.kyobobook.co.kr/detail/S000221773230"],
+     ["AI 시대, 부모로 살아가기","https://product.kyobobook.co.kr/detail/S000221031456"],
+     ["피지컬 AI 2026","https://product.kyobobook.co.kr/detail/S000219669213"]],
+    [["AI 에이전트 트렌드&활용백과","https://product.kyobobook.co.kr/detail/S000216958553"],
+     ["챗봇 2025 트렌드&활용백과","https://product.kyobobook.co.kr/detail/S000213456310"]],
+    [["AI 2026 트렌드&활용백과","https://ebook-product.kyobobook.co.kr/dig/epd/ebook/E000012086119"],
+     ["AI 2025 트렌드&활용백과","https://ebook-product.kyobobook.co.kr/dig/epd/ebook/E000010552088"],
+     ["AI 2024 트렌드&활용백과","https://ebook-product.kyobobook.co.kr/dig/epd/ebook/E000005476456"]]
+  ];
+
+  function pad(n){return ("00"+n).slice(-3)}
+  function el(id){return document.getElementById(id)}
+
+  // 트렌드 카드
+  var tl = el("trendList");
+  TRENDS.forEach(function(t){
+    var a = document.createElement("a"); a.className="trend"; a.href="#/read/"+t[0];
+    a.innerHTML = '<img loading="lazy" src="thumbs/'+pad(t[0])+'.webp" alt="" width="480" height="270">'+
+      '<div><span class="no">TREND '+t[1]+'</span><b>'+t[2]+'</b><p>'+t[3]+'</p></div>';
+    tl.appendChild(a);
+  });
+  // 책 목록
+  var bl = el("bookList");
+  BOOKS.forEach(function(row){
+    var r=document.createElement("div"); r.className="brow";
+    row.forEach(function(b){
+      var a=document.createElement("a"); a.target="_blank"; a.rel="noopener";
+      a.href=b[1]; a.textContent=b[0]; r.appendChild(a);
+    });
+    bl.appendChild(r);
+  });
+
+  // 리더
+  var reader=el("reader"), img=el("rImg"), range=el("rRange"), count=el("rCount"), toc=el("rToc"),
+      strip=el("strip"), endcard=el("endcard"), title=el("rTitle"), cur=1, lastScroll=0;
+  TOC.forEach(function(t){var o=document.createElement("option"); o.value=t[0]; o.textContent=t[1]+" ("+t[0]+")"; toc.appendChild(o)});
+  for (var i=1;i<=TOTAL;i++){
+    var b=document.createElement("button"); b.dataset.p=i;
+    b.innerHTML='<img loading="lazy" src="thumbs/'+pad(i)+'.webp" alt="'+i+'장" width="480" height="270"><span>'+i+'</span>';
+    b.onclick=function(){go(+this.dataset.p)}; strip.appendChild(b);
+  }
+  function section(p){var s=TOC[0][1]; TOC.forEach(function(t){if(p>=t[0]) s=t[1]}); return s}
+  var KYOBO="https://product.kyobobook.co.kr/detail/S000221773230", LEC="https://buly.kr/FLbHLeq",
+      MAIL="mailto:info@itcl.kr", YT="https://www.youtube.com/@newsduk", KT="https://open.kakao.com/o/gQiVg8Bh";
+  var HOT={1:[[1330,515,1550,770,KYOBO,"교보문고 예약"]],
+    3:[[1035,358,1475,398,LEC,"강연 요청"],[1255,396,1420,434,MAIL,"info@itcl.kr"]],
+    7:[[0,0,1600,900,YT,"김덕진의 뉴스덕 유튜브"]],
+    120:[[1352,640,1540,830,KYOBO,"교보문고 예약"]],
+    121:[[1005,714,1455,754,LEC,"강연 요청"],[1245,753,1402,792,MAIL,"info@itcl.kr"],[1085,195,1380,592,KT,"김덕진의 AI 큐레이션 오픈카톡방"]]};
+  var hot=el("rHot");
+  function placeHot(){
+    var st=el("stage").getBoundingClientRect(), r=img.getBoundingClientRect();
+    hot.style.left=(r.left-st.left)+"px"; hot.style.top=(r.top-st.top)+"px";
+    hot.style.width=r.width+"px"; hot.style.height=r.height+"px";
+  }
+  function setHot(p){
+    hot.innerHTML="";
+    (HOT[p]||[]).forEach(function(h){
+      var a=document.createElement("a"); a.href=h[4]; a.title=h[5]; a.setAttribute("aria-label",h[5]);
+      if(h[4].indexOf("mailto:")!==0){a.target="_blank"; a.rel="noopener"}
+      a.style.left=(h[0]/16)+"%"; a.style.top=(h[1]/9)+"%"; a.style.width=((h[2]-h[0])/16)+"%"; a.style.height=((h[3]-h[1])/9)+"%";
+      a.addEventListener("click",function(e){e.stopPropagation()});
+      hot.appendChild(a);
+    });
+  }
+  img.addEventListener("load",placeHot); window.addEventListener("resize",placeHot);
+  function show(p){
+    p=Math.max(1,Math.min(TOTAL,p)); cur=p;
+    img.classList.add("fade");
+    var src="pages/"+pad(p)+".webp", n=new Image();
+    hot.innerHTML="";
+    n.onload=function(){img.src=src; img.alt=p+"장"; img.classList.remove("fade"); setHot(p); placeHot()}; n.src=src;
+    [p+1,p+2,p-1].forEach(function(q){if(q>=1&&q<=TOTAL){var x=new Image(); x.src="pages/"+pad(q)+".webp"}});
+    range.value=p; count.textContent=p+" / "+TOTAL; title.textContent=section(p);
+    var best=TOC[0][0]; TOC.forEach(function(t){if(p>=t[0]) best=t[0]}); toc.value=best;
+    endcard.classList.toggle("on", p===TOTAL);
+    var cb=strip.querySelector(".cur"); if(cb) cb.classList.remove("cur");
+    var nb=strip.querySelector('[data-p="'+p+'"]'); if(nb){nb.classList.add("cur"); if(strip.classList.contains("on")) nb.scrollIntoView({block:"nearest",inline:"center"})}
+  }
+  function go(p){ location.hash="#/read/"+Math.max(1,Math.min(TOTAL,p)) }
+  function open(p){ if(!reader.classList.contains("on")){lastScroll=window.scrollY; reader.classList.add("on"); document.body.style.overflow="hidden"} show(p) }
+  function close(){ reader.classList.remove("on"); document.body.style.overflow=""; if(document.fullscreenElement) document.exitFullscreen() }
+  function route(){
+    var m=location.hash.match(/^#\/read\/(\d+)/);
+    if(m){ open(+m[1]) }
+    else { if(reader.classList.contains("on")){ close(); window.scrollTo(0,lastScroll) }
+           if(location.hash==="#/"||location.hash===""){ } }
+  }
+  window.addEventListener("hashchange",route);
+  el("rClose").onclick=function(){ history.length>1 && /#\/read/.test(location.hash) ? (location.hash="#/") : close() };
+  el("rPrev").onclick=el("rPrev2").onclick=function(){go(cur-1)};
+  el("rNext").onclick=el("rNext2").onclick=function(){go(cur+1)};
+  range.oninput=function(){ count.textContent=range.value+" / "+TOTAL };
+  range.onchange=function(){ go(+range.value) };
+  toc.onchange=function(){ go(+toc.value) };
+  el("rGrid").onclick=function(){ strip.classList.toggle("on"); show(cur) };
+  el("rFull").onclick=function(){ if(!document.fullscreenElement){ reader.requestFullscreen&&reader.requestFullscreen() } else { document.exitFullscreen() } };
+  el("endBuy").onclick=function(e){ e.preventDefault(); location.hash="#/"; setTimeout(function(){ el("buy").scrollIntoView() },60) };
+  document.addEventListener("keydown",function(e){
+    if(!reader.classList.contains("on")) return;
+    if(e.key==="ArrowRight"||e.key==="PageDown"||e.key===" "){e.preventDefault();go(cur+1)}
+    else if(e.key==="ArrowLeft"||e.key==="PageUp"){e.preventDefault();go(cur-1)}
+    else if(e.key==="Home"){go(1)} else if(e.key==="End"){go(TOTAL)}
+    else if(e.key==="Escape"&&!document.fullscreenElement){location.hash="#/"}
+  });
+  var sx=null, sy=null, stage=el("stage");
+  stage.addEventListener("touchstart",function(e){sx=e.touches[0].clientX; sy=e.touches[0].clientY},{passive:true});
+  stage.addEventListener("touchend",function(e){ if(sx===null) return;
+    var dx=e.changedTouches[0].clientX-sx, dy=e.changedTouches[0].clientY-sy;
+    if(Math.abs(dx)>40&&Math.abs(dx)>Math.abs(dy)) go(cur+(dx<0?1:-1)); sx=null },{passive:true});
+  img.addEventListener("click",function(e){ var r=img.getBoundingClientRect(); go(cur+((e.clientX-r.left)>r.width/2?1:-1)) });
+  img.addEventListener("contextmenu",function(e){e.preventDefault()});
+  route();
+})();
+</script>
+</body>
+</html>
